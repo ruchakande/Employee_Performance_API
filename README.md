@@ -56,13 +56,28 @@ A **RESTful API** for managing employee data and analyzing performance metrics. 
 
    CREATE INDEX idx_department ON employees(department);
    CREATE INDEX idx_performance_score ON employees(performance_score);
+   
 5. Update db.py with your MySQL credentials.
 6. Run the API: `flask run`
 7. Test endpoints using Postman, curl, or any API testing tool.
 
 Project Structure:
+```bash
 Employee_Performance_API/
-├── app.py           # Flask API entry point
-├── db.py            # MySQL connection setup
-├── analytics.py     # Pandas-based analytics functions
-├── requirements.txt # Python dependencies
+├── app.py            # Flask API entry point: handles REST endpoints
+├── db.py             # MySQL database connection setup
+├── analytics.py      # Pandas-based analytics and summary functions
+├── requirements.txt  # Python dependencies
+└── README.md         # Project documentation
+```
+
+Explanation of files:
+`app.py` – Main Flask application. Defines all API routes for adding/listing employees and analytics endpoints.
+
+`db.py` – Manages the connection to the MySQL database. Update this with your credentials.
+
+`analytics.py` – Contains Pandas functions to aggregate employee data and calculate department-wise metrics.
+
+`requirements.txt` – Lists all required Python packages for easy setup.
+
+`README.md` – Documentation for setup, features, API endpoints, and project overview.
